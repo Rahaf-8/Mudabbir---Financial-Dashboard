@@ -28,10 +28,10 @@ body {
   width: 95%;
   margin: 0 auto;
 }
-
 .container-body {
   display: flex;
 }
+/* Side-bar */
 .side-bar {
   width: 17%;
   height: 100vh;
@@ -43,11 +43,6 @@ body {
   scrollbar-color: #e5e7eb transparent;
 }
 
-.main {
-  width: 83%;
-  margin-right: 17%;
-  background-color: #f9fafb;
-}
 .side-bar .logo-title {
   display: flex;
   gap: 15px;
@@ -85,7 +80,6 @@ p {
   font-weight: 600;
   margin: 0;
 }
-
 .sec1-side-bar,
 .sec2-side-bar {
   display: flex;
@@ -111,7 +105,6 @@ p {
 a {
   text-decoration: none;
 }
-
 .sec2-side-bar .icon {
   width: 40px;
   height: 40px;
@@ -137,16 +130,21 @@ a {
   background-color: #fbe4d4;
   color: #f54a00;
 }
+.main {
+  width: 83%;
+  margin-right: 17%;
+  background-color: #f9fafb;
+}
 .main .container-2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.7fr 1fr 1.3fr 1.1fr 0.9fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr;
+  grid-template-rows: 0.2fr 0.3fr 1fr 0.9fr 0.7fr 1fr;
   gap: 30px 20px;
   grid-template-areas:
     "header header header"
     "income Expenses Current-balance  "
-    "Recent-transactions Recent-transactions Recent-activitie"
-    "Recent-transactions Recent-transactions Monthly-bills"
+    "Recent-activitie Recent-transactions Recent-transactions "
+    "Monthly-bills Recent-transactions Recent-transactions "
     "Payment-methods Income-vs-expenses Budget-overview"
     "Payment-methods Account-summary Budget-overview";
 }
@@ -156,36 +154,31 @@ a {
   border-radius: 15px;
   border: 2px solid #ecedee;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   margin-top: 30px;
   padding: 7px 5px;
-  gap: 50%;
   box-shadow: 2px #f9fafb;
-}
-.logo-title {
-  width: 50%;
 }
 .header .logo-title {
   display: flex;
   align-items: center;
   margin-right: 30px;
-  gap: 15px;
-  width: 50%;
+  gap: 10px;
+  width: 30%;
 }
 .header .logo-title .title {
   margin-bottom: 20px;
   width: 33%;
 }
 .account-title {
-  width: 50%;
+  width: 25%;
   display: flex;
   gap: 25px;
   justify-content: center;
   align-items: center;
   margin-left: 15px;
 }
-
 .header .account-title .account-icons {
   display: flex;
   gap: 10px;
@@ -203,12 +196,12 @@ a {
   color: oklch(0.446 0.03 256.802);
 }
 .account-info {
-  width: 60%;
+  width: 50%;
   display: flex;
   gap: 15px;
-  border: 2px solid #dfe0e4;
+  border: 1px solid #dfe0e4;
   background-color: #ffffff;
-  padding: 5px;
+  padding: 10px 5px;
   border-radius: 15px;
   justify-content: center;
   align-items: center;
@@ -226,14 +219,13 @@ a {
 }
 .logo-title .online ul {
   background-color: #f0fdf4;
-  text-align: center;
   color: #008236;
   font-weight: 600;
   border: 2px solid #ddfbe7;
   width: 100%;
   padding: 5px 5px;
+  border-radius: 10px;
 }
-
 .account-info .content h3 {
   margin: 0;
   font-weight: 600;
@@ -294,10 +286,8 @@ a {
 .containers-3 .t3 .icon-2 {
   font-size: 8px;
 }
-
 .Current-balance {
   grid-area: Current-balance;
-
   color: #e7000b;
 }
 .Income {
@@ -308,11 +298,66 @@ a {
   grid-area: Expenses;
   color: #2ab55d;
 }
-.Recent-activitie {
-  grid-area: Recent-activitie;
-}
 .Recent-transactions {
   grid-area: Recent-transactions;
+  border: 2px solid #edeef0;
+  border-radius: 15px;
+  background-color: #ffffff;
+  padding: 20px 15px;
+}
+.Recent-transactions .card {
+  display: flex;
+  justify-content: space-between;
+}
+.Recent-transactions .card h3 {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 600;
+  color: #101828;
+}
+.Recent-transactions .card span {
+  font-weight: 500;
+  color: oklch(0.21 0.034 264.665);
+  font-size: 14px;
+  line-height: 20px;
+}
+.Recent-transactions .table-transactions .mudabbir-table {
+  width: 100%;
+  text-align: right center;
+  table-layout: fixed;
+  margin-top: 20px;
+}
+.Recent-transactions .table-transactions .mudabbir-table thead th {
+  font-size: 16px;
+  color: #364153;
+  margin-top: 30px;
+}
+.Recent-transactions .table-transactions .table-title {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+.Recent-transactions .table-transactions .table-title h4{
+    font-size: 12px;
+    line-height: 20px;
+    
+}
+.Recent-transactions .table-transactions .table-title p{
+    font-size: 10px;
+    line-height: 16px;
+}
+.Recent-transactions .table-transactions .table-title .img-table {
+  width: 30%;
+}
+.Recent-transactions .table-transactions .table-title .img-table img {
+  width: 100%;
+  display: block;
+  border-radius: 50%;
+}
+.Recent-activitie {
+  grid-area: Recent-activitie;
 }
 .Monthly-bills {
   grid-area: Monthly-bills;
