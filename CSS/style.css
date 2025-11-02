@@ -1,0 +1,277 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+}
+.font {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  color: oklch(0.446 0.03 256.802);
+  font-size: 16px;
+  line-height: 24px;
+}
+.container-1 {
+  width: 85%;
+  margin: 0 auto;
+}
+.container-2 {
+  width: 95%;
+  margin: 0 auto;
+}
+
+.container-body {
+  display: flex;
+}
+.side-bar {
+  width: 17%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: #e5e7eb transparent;
+}
+
+.main {
+  width: 83%;
+  margin-right: 17%;
+  background-color: #f9fafb;
+}
+.side-bar .logo-title {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin-top: 15px;
+  width: 100%;
+}
+.logo {
+  width: 55px;
+  height: 55px;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 15px;
+  background-image: linear-gradient(135deg, #2754f4, #3e39e0, #3547ea);
+}
+.logo i {
+  color: #ffff;
+  font-size: 20px;
+}
+.title {
+  width: 40%;
+}
+.title h1,
+p {
+  margin: 0;
+}
+.title h1 {
+  font-size: 34px;
+}
+
+.title p {
+  font-size: 12px;
+  color: oklch(0.446 0.03 256.802);
+  font-weight: 600;
+  margin: 0;
+}
+
+.sec1-side-bar,
+.sec2-side-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-top: 50px;
+}
+.sec2-side-bar h3 {
+  font-weight: 600;
+  color: oklch(0.373 0.034 259.733);
+  font-size: 14px;
+  line-height: 20px;
+}
+.label {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  align-items: center;
+}
+.gray-icon {
+  color: #6a7282;
+}
+a {
+  text-decoration: none;
+}
+
+.sec2-side-bar .icon {
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+.sec2-side-bar .icon1 {
+  background-color: #eaf3ff;
+  color: #155dfc;
+}
+.sec2-side-bar .icon2 {
+  background-color: #d4f3e1;
+  color: #00a63e;
+}
+.sec2-side-bar .icon3 {
+  background-color: #efe0fc;
+  color: #9810fa;
+}
+.sec2-side-bar .icon4 {
+  background-color: #fbe4d4;
+  color: #f54a00;
+}
+.main .container-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.7fr 1fr 1.3fr 1.1fr 0.9fr 1fr;
+  gap: 20px 10px;
+  grid-template-areas:
+    "header header header"
+    "Expenses income Current-balance"
+    "Recent-transactions Recent-transactions Recent-activitie"
+    "Recent-transactions Recent-transactions Monthly-bills"
+    "Payment-methods Income-vs-expenses Budget-overview"
+    "Payment-methods Account-summary Budget-overview";
+}
+.header {
+  grid-area: header;
+  background-image: linear-gradient(180deg, #f5f9fd, #fefeff, #f6f8fc);
+  border-radius: 15px;
+  border: 2px solid #ecedee;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+  padding: 7px 5px;
+  gap: 50%;
+  box-shadow: 2px #f9fafb;
+}
+.logo-title {
+  width: 50%;
+}
+.header .logo-title {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  gap: 15px;
+  width: 50%;
+}
+.header .logo-title .title {
+  margin-bottom: 20px;
+  width: 33%;
+}
+.account-title {
+  width: 50%;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin-left: 15px;
+}
+
+.header .account-title .account-icons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.header .account-title .account-icons .icon-header {
+  border: 1px solid #e2e3e4;
+  border-radius: 10px;
+  padding: 7px 10px;
+}
+.header .account-title .account-icons i {
+  font-size: 16px;
+  color: oklch(0.446 0.03 256.802);
+}
+.account-info {
+  width: 60%;
+  display: flex;
+  gap: 15px;
+  border: 2px solid #dfe0e4;
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 15px;
+  justify-content: center;
+  align-items: center;
+}
+.account-info .image {
+  width: 30%;
+  border: 1px solid #000000;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.account-info .image img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.logo-title .online ul {
+  background-color: #f0fdf4;
+  text-align: center;
+  color: #008236;
+  font-weight: 600;
+  border: 2px solid #ddfbe7;
+  width: 100%;
+  padding: 5px 5px;
+}
+
+.account-info .content h3 {
+  margin: 0;
+  font-weight: 600;
+  color: oklch(0.21 0.034 264.665);
+  font-size: 14px;
+  line-height: 20px;
+}
+.account-info .content p {
+  margin: 0;
+  font-weight: 600;
+  color: oklch(0.551 0.027 264.364);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.Current-balance {
+  grid-area: Current-balance;
+}
+.income {
+  grid-area: income;
+}
+.Expenses {
+  grid-area: Expenses;
+}
+.Recent-activitie {
+  grid-area: Recent-activitie;
+}
+.Recent-transactions {
+  grid-area: Recent-transactions;
+}
+.Monthly-bills {
+  grid-area: Monthly-bills;
+}
+.Budget-overview {
+  grid-area: Budget-overview;
+}
+.Income-vs-expenses {
+  grid-area: Income-vs-expenses;
+}
+.Payment-methods {
+  grid-area: Payment-methods;
+}
+.Account-summary {
+  grid-area: Account-summary;
+}
