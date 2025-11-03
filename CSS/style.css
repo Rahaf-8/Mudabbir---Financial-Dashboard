@@ -20,6 +20,46 @@ body {
   font-size: 16px;
   line-height: 24px;
 }
+.green{
+    color:#016630;
+    background-color: #DBFCE7;
+}
+.padding{
+    padding: 5px 15px;
+    border-radius: 25px;
+}
+.orange{
+    color:#9F2D00;
+    background-color: #FFEDD4;  
+}
+.blue{
+    color:#193CB8;
+    background-color:#DBEAFE;
+}
+.violet{
+    color:#6E11B0;
+    background-color:#F3E8FF;
+}
+.red{
+    color:#9F0712;
+    background-color:#FFE2E2
+}
+.baby-blue{
+    color:#005F78;
+    background-color:#CEFAFE;
+}
+.v-b{
+    color: #372AAC;
+    background-color: #E0E7FF;
+}
+.yellow{
+    color:#894B00;
+    background-color:#FEF9C2;
+}
+.border{
+    border: 1px solid #E4E4E7;
+    border-radius: 15px;
+}
 .container-1 {
   width: 85%;
   margin: 0 auto;
@@ -98,7 +138,9 @@ p {
   flex-wrap: wrap;
   gap: 15px;
   align-items: center;
+ 
 }
+
 .gray-icon {
   color: #6a7282;
 }
@@ -141,12 +183,19 @@ a {
   grid-template-rows: 0.2fr 0.3fr 1fr 0.9fr 0.7fr 1fr;
   gap: 30px 20px;
   grid-template-areas:
-    "header header header"
-    "income Expenses Current-balance  "
-    "Recent-activitie Recent-transactions Recent-transactions "
+"header header header"
+    "Expenses income Current-balance"
+    "Recent-activities Recent-transactions Recent-transactions "
+    "Recent-activities Recent-transactions Recent-transactions "
     "Monthly-bills Recent-transactions Recent-transactions "
-    "Payment-methods Income-vs-expenses Budget-overview"
-    "Payment-methods Account-summary Budget-overview";
+    "Monthly-bills Recent-transactions Recent-transactions "
+    "Monthly-bills Recent-transactions Recent-transactions "
+    "Budget-overview Income-vs-expenses  Payment-methods"
+    "Budget-overview Income-vs-expenses  Payment-methods"
+    "Budget-overview Account-summary  Payment-methods"
+    "Budget-overview Account-summary  Payment-methods"
+    "Budget-overview . .";
+
 }
 .header {
   grid-area: header;
@@ -324,37 +373,75 @@ a {
 .Recent-transactions .table-transactions .mudabbir-table {
   width: 100%;
   text-align: right center;
-  table-layout: fixed;
-  margin-top: 20px;
+  table-layout:fixed;
+  margin-top: 15px;
+  border-spacing: 20px 30px;
+  border-collapse: separate;
+ 
 }
 .Recent-transactions .table-transactions .mudabbir-table thead th {
   font-size: 16px;
   color: #364153;
   margin-top: 30px;
 }
+
+.Recent-transactions .table-transactions .mudabbir-table td{
+    /* padding: 0px 10px; */
+    text-align: center;
+    width: 100%;
+}
+.Recent-transactions .table-transactions .mudabbir-table td span , .Recent-transactions .table-transactions .mudabbir-table td i{
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 600;
+}
+
+.Recent-transactions .table-transactions .mudabbir-table .table-category{
+    width: 80%;
+    border-radius: 25px;
+    text-align: center;
+}
+.Recent-transactions .table-transactions .mudabbir-table td p{
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+}
 .Recent-transactions .table-transactions .table-title {
   display: flex;
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
 }
-.Recent-transactions .table-transactions .table-title h4{
-    font-size: 12px;
-    line-height: 20px;
-    
-}
-.Recent-transactions .table-transactions .table-title p{
-    font-size: 10px;
-    line-height: 16px;
-}
+
 .Recent-transactions .table-transactions .table-title .img-table {
-  width: 30%;
+  width: 35%;
+}
+.Recent-transactions .table-transactions .table-title .icon-table {
+  width: 35%;
+  align-items: center;
+  border-radius: 50%;
+  padding: 10px;
 }
 .Recent-transactions .table-transactions .table-title .img-table img {
   width: 100%;
   display: block;
   border-radius: 50%;
+}
+.Recent-transactions .table-transactions .table-title .icon-table i{
+     border-radius: 50%;
+     font-size: 1.1rem;
+
+}
+.Recent-transactions .table-transactions .title-table{
+    width: 65%;
+}
+.Recent-transactions .table-transactions .table-title .title-table h4{
+    font-size: 10px;
+    line-height: 10px; 
+}
+.Recent-transactions .table-transactions .table-title .title-table p{
+    font-size: 10px;
+    line-height: 16px;
 }
 .Recent-activitie {
   grid-area: Recent-activitie;
